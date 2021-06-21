@@ -11,11 +11,11 @@ def make_artifacts(APP_TYPE, COMPONENT) {
   println("abc${get_branch_exec}abc")
   def FILENAME=COMPONENT+'-'+get_branch_exec+'.zip'
   if(APP_TYPE == "NGINX") {
-    command = " zip -r ${FILENAME} node_modules dist"
+    command = " zip -r ${FILENAME} . "
     def execute_com=sh(returnStdout: true, script: command)
     print execute_com
   } else if(APP_TYPE == "NODEJS") {
-    command = "zip -r ${FILENAME} node_modules server.js"
+    command = "zip -r ${FILENAME} . "
     def execute_com=sh(returnStdout: true, script: command)
     print execute_com
   } else if(APP_TYPE == "JAVA") {
@@ -23,7 +23,7 @@ def make_artifacts(APP_TYPE, COMPONENT) {
     def execute_com=sh(returnStdout: true, script: command)
     print execute_com
   } else if(APP_TYPE == "GOLANG") {
-    command = "zip -r ${FILENAME} login-ci main.go user.go tracing.go"
+    command = "zip -r ${FILENAME} . "
     def execute_com=sh(returnStdout: true, script: command)
     print execute_com
   }

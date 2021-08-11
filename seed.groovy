@@ -22,7 +22,7 @@ for (i in 0..count) {
         'scm'(class:'hudson.plugins.git.GitSCM',plugin:'git') {
           'userRemoteConfigs' {
             'hudson.plugins.git.UserRemoteConfig' {
-              'url'('https://github.com/Manmohan506/'+j+'.git')
+              'url'('https://github.com/Manmohanzs01/'+j+'.git')
               'refspec'('\'+refs/tags/*\':\'refs/remotes/origin/tags/*\'')
 
 
@@ -34,7 +34,7 @@ for (i in 0..count) {
             }
           }
         }
-        'scriptPath'('jenkinsfile')
+        'scriptPath'('jenkinsfile-DOCKER')
         'lightweight'(true)
       }
     }

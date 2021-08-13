@@ -34,7 +34,7 @@ for (i in 0..count) {
             }
           }
         }
-        'scriptPath'('jenkinsfile-DOCKER')
+        'scriptPath'('jenkinsfile')
         'lightweight'(true)
       }
     }
